@@ -1,0 +1,19 @@
+{
+	"Rust Script": {
+		"description": "A Rust script.",
+		"isFileTemplate": true,
+		"prefix": [
+			"rs"
+		],
+		"body": [
+			"#!/usr/bin/env rust-script",
+			"//! A Rust script.",
+			"//!",
+			"//! ```cargo\n//! [dependencies]\n//! ```",
+			"",
+			"fn main() {",
+			"\t$1",
+			"}"
+		]
+	}
+}
