@@ -1,0 +1,58 @@
+[
+  // cycle forward through tabs
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  // cycle backward through tabs
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  // terminal copy
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.terminal.copySelection",
+    "when": "terminalFocus && terminalTextSelected"
+  },
+  // terminal paste
+  {
+    "key": "ctrl+v",
+    "command": "workbench.action.terminal.paste",
+    "when": "terminalFocus"
+  },
+  // close editor
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate"
+  },
+  {
+    "key": "shift+f12",
+    "command": "github.copilot.generate"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated"
+  }
+  // Vim keybind
+  // {
+  // "key": "tab",
+  // "command": "tab",
+  // "when": "editorTextFocus && !editorTabMovesFocus"
+  // },
+  // {
+  // "key": "shift+tab",
+  // "command": "outdent",
+  // "when": "editorTextFocus && !editorTabMovesFocus"
+  // }
+]

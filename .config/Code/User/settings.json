@@ -1,0 +1,385 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f",
+    // cursors
+    // "editorCursor.foreground": "#ffff00",
+    // "terminalCursor.foreground": "#ffff00"
+    // "editorCursor.foreground": "#8bc89d",
+    // "terminalCursor.foreground": "#8bc89d"
+    "editorCursor.foreground": "#00fff2",
+    "terminalCursor.foreground": "#00fff2",
+    // "editor.selectionBackground": "#135564",
+    // "editor.selectionHighlightBackground": "#135564"
+    // "editor.selectionBackground": "#09165f",
+    // "editor.selectionHighlightBackground": "#09415f"
+    "editor.selectionBackground": "#054457",
+    "editor.selectionHighlightBackground": "#054457"
+  },
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.autoReveal": false,
+  "atomKeymap.promptV3Features": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  /**
+   * Editor
+   */
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "biomejs.biome-nightly",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.fontLigatures": true,
+  // "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.fontSize": 10,
+  "editor.inlayHints.padding": true,
+  "editor.inlayHints.fontFamily": "roboto",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.suggestSelection": "first",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'Fira Code', 'Hasklug Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Noto Color Emoji'",
+  "editor.fontWeight": "500",
+  "editor.linkedEditing": false,
+  "editor.selectionClipboard": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // https://stackoverflow.com/a/72518926
+  // https://github.com/microsoft/vscode/issues/98594
+  "search.followSymlinks": false,
+  "diffEditor.renderSideBySide": false,
+  /**
+   * Terminal
+   */
+  "terminal.integrated.fontFamily": "MesloLGS NF, MesloLGS Nerd Font Mono",
+  "terminal.integrated.allowChords": false,
+  // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh"
+    },
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  /**
+   * Language-specific formatters
+   */
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+    // "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[jsonnet]": {
+    // "editor.defaultFormatter": "xrc-inc.jsonnet-formatter"
+  },
+  "[kotlin]": {
+    "editor.defaultFormatter": "fwcd.kotlin"
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    // "editor.wordWrap": "off",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true
+  },
+  "[tiltfile]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  },
+  // ! below does not work
+  // "[tiltfile]": {
+  // "emeraldwalk.runonsave": {
+  //   "commands": [
+  //     {
+  //       "match": "Tiltfile",
+  //       "cmd": "vscode.languages.setTextDocumentLanguage(activeEditor.document, python)"
+  //     }
+  //   ]
+  // },
+  //   "editor.defaultFormatter": "ms-python.python"
+  // },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[solidity]": {
+    "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  },
+  // automatically wrap comments
+  // "rewrap.autoWrap.enabled": true,
+  /**
+   * JavaScript
+   */
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.autoClosingTags": false,
+  /**
+   * TypeScript
+   */
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // disable auto-closing tags
+  "typescript.tsserver.log": "off",
+  // https://stackoverflow.com/questions/52935211/disable-tsserver-for-visual-studio-code
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.autoClosingTags": false,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+  /**
+   * Python
+   */
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  // "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--show-column-numbers",
+    "--strict"
+  ],
+  "python.pythonPath": "~/.cache/pypoetry/virtualenvs",
+  /**
+   * Settings sync
+   */
+  // "sync.gist": "fb67a955cae9b9d3c90ff960a3f5c3e1",
+  // "sync.autoDownload": true,
+  // "sync.removeExtensions": false,
+  // "sync.syncExtensions": false,
+  /**
+   * Miscellaneous
+   */
+  "files.trimTrailingWhitespace": true,
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+  // "eslint.debug": true,
+  "eslint.codeActionsOnSave.rules": null,
+  // "prettier.disableLanguages": ["markdown", "mdx"],
+  "mdx.experimentalLanguageServer": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": null
+    }
+  ],
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.tree.showScanModeButton": false,
+  /**
+   * Vim
+   */
+  // "vim.useSystemClipboard": true,
+  "vim.enableNeovim": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "WolframLanguageServer.WLServerPath": "/home/brian/Downloads/lsp-wl/",
+  "povray.render.displayImageDuringRender": true,
+  "povray.render.outputPath": "./output",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+  "gitlens.keymap": "none",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.invert": 1,
+  "files.associations": {
+    "*.prisma": "prisma",
+    "*.rmd": "markdown",
+    "*.yaml": "yaml",
+    "*.jsonnet": "jsonnet"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  // "browser-preview.chromeExecutable": "/usr/bin/brave",
+  "markdown-preview-enhanced.printBackground": true,
+  "quokka.showOutputOnStart": false,
+  "quokka.suppressExpirationNotifications": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "jupyter.askForKernelRestart": false,
+  "tabnine.experimentalAutoImports": true,
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.linux": "/home/brian/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vscode-kubernetes.kubectl-path.linux": "/home/brian/.vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.helm-path.linux": "/home/brian/.vs-kubernetes/tools/helm/linux-amd64/helm"
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "editor.wordWrap": "bounded",
+  "diffEditor.wordWrap": "off",
+  "redhat.telemetry.enabled": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "markdown-preview-enhanced.scrollSync": false,
+  "julia.symbolCacheDownload": true,
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "codesnap.containerPadding": "0",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // "C_Cpp.updateChannel": "Insiders",
+  "UEIntellisenseFixes.enableFixes": true,
+  "UEIntellisenseFixes.enableOptionalFixes": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "[hosts]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "powershell.codeFormatting.autoCorrectAliases": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "bracketPairColorizer.depreciation-notice": false,
+  "editor.minimap.enabled": false,
+  "markdown-preview-enhanced.codeBlockTheme": "default.css",
+  "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
+  "markdown-preview-enhanced.chromePath": "chromium",
+  "editor.guides.indentation": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false,
+    "typescriptreact": true,
+    "jsonc": true
+  },
+  "hardhat.telemetry": false,
+  "codesnap.showLineNumbers": false,
+  "codesnap.showWindowControls": false,
+  "polacode.transparentBackground": true,
+  "codesnap.roundedCorners": false,
+  "polacode.backgroundColor": "#b2ffee",
+  "codesnap.transparentBackground": true,
+  "editor.stickyScroll.enabled": true,
+  "githubPullRequests.pullBranch": "never",
+  "git.autofetch": true,
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide"
+  },
+  "nix.formatterPath": "nixfmt",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.colorTheme": "Dracula",
+  "[purescript]": {
+    "editor.defaultFormatter": "nwolverson.ide-purescript"
+  },
+  "react-native-tools.showUserTips": false,
+  "remote.SSH.defaultExtensions": [
+    "gitpod.gitpod-remote-ssh"
+  ],
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${rootPath}${separator}${appName}",
+  "solidity.telemetry": false,
+  "arduino.useArduinoCli": true,
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  // "[typescriptreact]": {
+  // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "[scad]": {
+    "editor.defaultFormatter": "JulianGmp.openscad-formatter"
+  },
+  "fe.command": "/usr/bin/fe build",
+  "svelte.enable-ts-plugin": true,
+  "errorLens.enabled": true,
+  "jupyter.interactiveWindow.textEditor.executeSelection": false,
+  "hediet.vscode-drawio.resizeImages": null,
+  "jest.autoRevealOutput": "off",
+  "jest.autoRun": {
+    "watch": "false"
+  },
+  "fe.options": "--overwrite --emit=abi,bytecode,ast,tokens,yul,lowered-ast",
+  "D2.previewLayout": "dagre",
+  "D2.previewTheme": "Cool classics",
+  "cmake.configureOnOpen": false,
+  "python.formatting.provider": "none",
+  "workbench.editor.empty.hint": "hidden",
+  "go.toolsManagement.autoUpdate": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "julia.enableTelemetry": false,
+  "cmake.showOptionsMovedNotification": false,
+  "explorer.confirmPasteNative": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "playwright.showTrace": true,
+  "window.zoomLevel": 1,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "glassit.alpha": 36,
+  // "rust-analyzer.checkOnSave.command": "clippy"
+  // "arduino.path": "/usr/share/ardino",
+}
