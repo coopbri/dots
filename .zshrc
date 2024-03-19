@@ -1,6 +1,7 @@
 # https://old.reddit.com/r/zsh/comments/ltcacs/zsh_error_character_not_in_range/
 export LC_ALL=en_US.UTF-8
 
+# TODO fix initial console warning
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -60,8 +61,9 @@ DISABLE_AUTO_UPDATE="true"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# Set custom `oh-my-zsh` config dir
+# NB: any files immediately in $ZSH_CUSTOM ending in `.zsh` are immediately sourced
+ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -130,6 +132,10 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 alias yay="paru"
 
 alias x="pkgx"
+
+alias neo="neofetch"
+
+alias htop="btop"
 
 alias pullaf="ls | xargs -P10 -I{} git -C {} pull"
 
