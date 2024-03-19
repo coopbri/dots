@@ -215,7 +215,7 @@ alias r="Rscript"
 
 alias mine="~/Data/Cloud/Nextcloud/scripts/ethminer.sh"
 
-alias cfg="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
+alias cfg="/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME"
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
