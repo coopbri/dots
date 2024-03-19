@@ -11,9 +11,10 @@
     "spacing": 4,
     // Choose the order of the modules
     "modules-left": [
+        "custom/logo",
         "hyprland/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
+        // "sway/mode",
+        // "sway/scratchpad",
         "custom/media"
     ],
     // "modules-center": ["sway/window"],
@@ -22,6 +23,7 @@
     ],
     // TODO get 'vpn' module working
     "modules-right": [
+        "tray",
         "mpd",
         // "idle_inhibitor",
         "pulseaudio",
@@ -36,7 +38,7 @@
         // "battery",
         // "battery#bat2",
         // "clock",
-        "tray"
+        "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -156,6 +158,13 @@
             ""
         ]
     },
+    "custom/logo": {
+        // TODO make a lil larger
+        "format": "  ",
+        "tooltip": false
+        // TODO launch wofi
+        // "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
+    },
     "battery": {
         "states": {
             // "good": 95,
@@ -223,5 +232,11 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format": "󰤆",
+        "tooltip": false
+        // TODO configure wofi power menu
+        // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
     }
 }
