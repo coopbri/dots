@@ -1,0 +1,39 @@
+/* see man 5 wofi */
+
+* {
+  border: none;
+  border-radius: 3px;
+}
+
+window {
+  color: #fff;
+  /* background-color: #181825; */
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: "Roboto Mono Medium", sans-serif;
+  font-size: 24px;
+  /* border-bottom: 3px solid white; */
+}
+
+#entry {
+  padding: 0.25rem;
+}
+
+#entry:selected {
+  background-color: #94e2d5;
+  background: linear-gradient(90deg, #bbccdd, #cca5dd);
+}
+
+#text:selected {
+  color: #333333;
+}
+
+#input {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem;
+}
+
+/* TODO normalize styles for entries with dropdowns, ideally line them up */
+image {
+  margin: 0 0.25rem;
+}

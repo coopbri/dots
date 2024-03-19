@@ -1,0 +1,10 @@
+# set default mode
+mode=drun
+
+# images
+allow_images=true
+image_size=48
+
+# size
+# width=600
+width=25%
