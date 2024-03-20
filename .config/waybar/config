@@ -15,7 +15,8 @@
         "hyprland/workspaces",
         // "sway/mode",
         // "sway/scratchpad",
-        "custom/media"
+        "custom/media",
+        "hyprland/window"
     ],
     // "modules-center": ["sway/window"],
     "modules-center": [
@@ -24,11 +25,13 @@
     // TODO get 'vpn' module working
     "modules-right": [
         "tray",
-        "mpd",
+        // "mpd",
+        // "custom/spotify",
+        // "custom/utc",
         // "idle_inhibitor",
         "pulseaudio",
         "network",
-        "vpn",
+        // "vpn",
         "cpu",
         "memory",
         // "temperature",
@@ -57,6 +60,15 @@
     //         "default": ""
     //     }
     // },
+    "hyprland/window": {
+        //"format": "{}" // this is default
+        "format": "<span font='9' rise='-4444'>{}</span>"
+        // "rewrite": {
+        //     "(.*) - Mozilla Firefox": "🌎 $1",
+        //     "(.*) - fish": "> [$1]"
+        // },
+        // "separate-outputs": true
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -120,9 +132,10 @@
         // "timezone": "America/New_York",
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "format-alt": "{:%Y-%m-%d}"
-        "tooltip-format": "<tt>{calendar}</tt>",
+        // TODO remove leading zero; https://www.mankier.com/5/waybar-clock#Configuration, https://www.mankier.com/3/strftime#Description-%25l
+        "format": "  {:%I:%M %p}",
         "format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%I:%M %p}"
+        "tooltip-format": "<tt>{calendar}</tt>"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -233,6 +246,16 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+    // "custom/spotify": {
+    // "exec": "/usr/bin/python custom_modules/media_player.py --player spotify",
+    // "format": "{}  ",
+    // "return-type": "json",
+    // "on-click": "playerctl play-pause",
+    // "on-scroll-up": "playerctl next",
+    // "on-scroll-down": "playerctl previous"
+    // },
+    // TODO extend "clock" module
+    // "custom/utc": {},
     "custom/power": {
         "format": "󰤆",
         "tooltip": false
