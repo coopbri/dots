@@ -380,6 +380,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "glassit.alpha": 36,
+  "telemetry.telemetryLevel": "off",
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "serverlessIDE.telemetry.enableTelemetry": false,
+  "gitlens.telemetry.enabled": false,
+  "docker-explorer.enableTelemetry": false,
+  "rest-client.enableTelemetry": false,
   // "rust-analyzer.checkOnSave.command": "clippy"
   // "arduino.path": "/usr/share/ardino",
 }
