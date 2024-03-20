@@ -9,6 +9,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# https://github.com/flameshot-org/flameshot/blob/master/docs/Sway%20and%20wlroots%20support.md#basic-steps
+# https://github.com/flameshot-org/flameshot/issues/2978
+XDG_CURRENT_DESKTOP=Hyprland
+
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 # path to oh-my-zsh installation
@@ -131,11 +135,16 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 alias yay="paru"
 
+alias hx="helix"
+
 alias x="pkgx"
 
 alias neo="neofetch"
 
 alias htop="btop"
+
+# it's not virtue signaling, it's making the world a better place by keeping my terminal PC
+alias woman="man"
 
 alias pullaf="ls | xargs -P10 -I{} git -C {} pull"
 
