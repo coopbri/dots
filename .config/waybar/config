@@ -4,7 +4,7 @@
     // Waybar position (top|bottom|left|right)
     // "position": "bottom",
     // Waybar height (remove for auto height)
-    "height": 30,
+    "height": 42,
     // Waybar width
     // "width": 1280,
     // Gaps between modules (4px)
@@ -15,7 +15,7 @@
         "hyprland/workspaces",
         // "sway/mode",
         // "sway/scratchpad",
-        "custom/media",
+        // "custom/media",
         "hyprland/window"
     ],
     // "modules-center": ["sway/window"],
@@ -25,7 +25,7 @@
     // TODO get 'vpn' module working
     "modules-right": [
         "tray",
-        // "mpd",
+        "mpd",
         // "custom/spotify",
         // "custom/utc",
         // "idle_inhibitor",
