@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# source: https://github.com/Alexays/Waybar/blob/master/resources/custom_modules/mediaplayer.py
+
 import gi
 
 gi.require_version("Playerctl", "2.0")

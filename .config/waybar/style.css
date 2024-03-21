@@ -51,6 +51,8 @@ window#waybar.hidden {
 
 #cpu,
 #memory,
+/* TODO auto-map over custom modules */
+#custom-spotify,
 #custom-power,
 #battery,
 #backlight,
@@ -133,12 +135,10 @@ window#waybar.hidden {
   background-color: #f2cdcd;
 }
 
-/* .custom-spotify { */
-/* padding: 0 10px; */
-/* margin: 0 4px; */
-/* background-color: #1db954; */
-/* color: black; */
-/* } */
+#custom-spotify {
+  /* https://www.brandcolorcode.com/spotify */
+  background-color: #1ed760;
+}
 
 tooltip {
   border-radius: 8px;

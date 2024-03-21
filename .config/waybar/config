@@ -25,8 +25,8 @@
     // TODO get 'vpn' module working
     "modules-right": [
         "tray",
-        "mpd",
-        // "custom/spotify",
+        // "mpd",
+        "custom/spotify",
         // "custom/utc",
         // "idle_inhibitor",
         "pulseaudio",
@@ -91,32 +91,32 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
+    // "mpd": {
+    //     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    //     "format-disconnected": "Disconnected ",
+    //     "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    //     "unknown-tag": "N/A",
+    //     "interval": 2,
+    //     "consume-icons": {
+    //         "on": " "
+    //     },
+    //     "random-icons": {
+    //         "off": "<span color=\"#f53c3c\"></span> ",
+    //         "on": " "
+    //     },
+    //     "repeat-icons": {
+    //         "on": " "
+    //     },
+    //     "single-icons": {
+    //         "on": "1 "
+    //     },
+    //     "state-icons": {
+    //         "paused": "",
+    //         "playing": ""
+    //     },
+    //     "tooltip-format": "MPD (connected)",
+    //     "tooltip-format-disconnected": "MPD (disconnected)"
+    // },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -246,14 +246,14 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    // "custom/spotify": {
-    // "exec": "/usr/bin/python custom_modules/media_player.py --player spotify",
-    // "format": "{}  ",
-    // "return-type": "json",
-    // "on-click": "playerctl play-pause",
-    // "on-scroll-up": "playerctl next",
-    // "on-scroll-down": "playerctl previous"
-    // },
+    "custom/spotify": {
+        "exec": "/usr/bin/python custom_modules/media_player.py --player spotify",
+        "format": "{} ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl previous",
+        "on-scroll-down": "playerctl next"
+    },
     // TODO extend "clock" module
     // "custom/utc": {},
     "custom/power": {
@@ -263,3 +263,4 @@
         // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
     }
 }
+
