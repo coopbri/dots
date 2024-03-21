@@ -14,7 +14,7 @@
 	"disable-color-correct-rendering": true,
 	// Allows to disable crash reporting.
 	// Should restart the app if the value is changed.
-	"enable-crash-reporter": true,
+	"enable-crash-reporter": false,
 	// https://github.com/microsoft/vscode/issues/187338
 	// https://code.visualstudio.com/docs/editor/settings-sync#_recommended-configure-the-keyring-to-use-with-vs-code
 	"password-store": "gnome-keyring",
