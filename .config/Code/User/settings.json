@@ -61,11 +61,11 @@
   /**
    * Terminal
    */
-  "terminal.integrated.fontFamily": "MesloLGS NF, MesloLGS Nerd Font Mono",
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.allowChords": false,
   // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.rendererType": "dom",
   "terminal.integrated.commandsToSkipShell": [
     "language-julia.interrupt"
   ],
