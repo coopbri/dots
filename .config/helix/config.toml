@@ -2,7 +2,6 @@ theme = "dracula"
 
 [editor]
 line-number = "relative"
-
-[editor.soft-wrap]
-enable = true
+soft-wrap = { enable = true }
+rulers = [120]
 
