@@ -2,8 +2,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: Material Design Icons, JetBrainsMono Nerd Font;
-  font-size: 13px;
+  font-family: UbuntuMono Nerd Font;
 }
 
 window#waybar {
@@ -127,7 +126,6 @@ window#waybar.hidden {
 }
 
 #clock {
-  font-family: JetBrainsMono Nerd Font;
   background-color: #cba6f7;
 }
 
