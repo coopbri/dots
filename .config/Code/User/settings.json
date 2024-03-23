@@ -15,7 +15,7 @@
     // "editor.selectionBackground": "#09165f",
     // "editor.selectionHighlightBackground": "#09415f"
     "editor.selectionBackground": "#054457",
-    "editor.selectionHighlightBackground": "#054457"
+    "editor.selectionHighlightBackground": "#054457aa"
   },
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -33,7 +33,7 @@
    * Editor
    */
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.defaultFormatter": "biomejs.biome-nightly",
+  "editor.defaultFormatter": "biomejs.biome",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
@@ -82,12 +82,6 @@
     "editor.defaultFormatter": "xaver.clang-format"
     // "editor.defaultFormatter": "xaver.clang-format"
   },
-  "[csharp]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
-  },
-  "[jsonnet]": {
-    // "editor.defaultFormatter": "xrc-inc.jsonnet-formatter"
-  },
   "[kotlin]": {
     "editor.defaultFormatter": "fwcd.kotlin"
   },
@@ -130,9 +124,6 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[terraform]": {
-    "editor.defaultFormatter": "hashicorp.terraform"
   },
   "[solidity]": {
     "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
@@ -225,7 +216,6 @@
     "*.prisma": "prisma",
     "*.rmd": "markdown",
     "*.yaml": "yaml",
-    "*.jsonnet": "jsonnet"
   },
   "vsicons.dontShowNewVersionMessage": true,
   // "browser-preview.chromeExecutable": "/usr/bin/brave",
@@ -301,7 +291,6 @@
     "typescriptreact": true,
     "jsonc": true
   },
-  "hardhat.telemetry": false,
   "codesnap.showLineNumbers": false,
   "codesnap.showWindowControls": false,
   "polacode.transparentBackground": true,
