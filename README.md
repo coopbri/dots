@@ -2,6 +2,11 @@
 
 My personal dotfiles and system configuration.
 
+<div style="display: flex; justify-content: center; gap: 12px;">
+    <img src="https://rawcdn.githack.com/coopbri/assets/a1ce07d1434d9a4b8299d3fc224c064f24ee787d/dots/blank-workspace.png" width="444" />
+    <img src="https://rawcdn.githack.com/coopbri/assets/a1ce07d1434d9a4b8299d3fc224c064f24ee787d/dots/tiled-workspace.png" width="444" />
+</div>
+
 ## Software
 
 ### Core
