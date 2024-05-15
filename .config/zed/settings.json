@@ -1,0 +1,20 @@
+// Zed settings (https://zed.dev/docs/configuring-zed)
+{
+  // core
+  "theme": "Dracula",
+  "vim_mode": false,
+  "base_keymap": "Atom",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // font
+  "ui_font_family": "FiraCode Nerd Font Mono",
+  // TODO font weight
+  "ui_font_size": 18,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_size": 18,
+  "terminal": {
+    // TODO cursor line
+  }
+}
