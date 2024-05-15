@@ -1,14 +1,19 @@
 // Zed keymap overrides (https://zed.dev/docs/key-bindings)
 [
   {
+    "context": "Editor",
+    "bindings": {
+      // buffer navigation
+      "ctrl-shift-tab": "pane::ActivatePrevItem",
+      "ctrl-tab": "pane::ActivateNextItem"
+    }
+  },
+  {
     "context": "Editor && mode == full",
     "bindings": {
       // newlines
       "ctrl-shift-enter": "editor::NewlineAbove",
       "ctrl-enter": "editor::NewlineBelow",
-      // buffer navigation
-      "ctrl-shift-tab": "pane::ActivatePrevItem",
-      "ctrl-tab": "pane::ActivateNextItem",
       // line movement
       "ctrl-up": "editor::MoveLineUp",
       "ctrl-down": "editor::MoveLineDown"
