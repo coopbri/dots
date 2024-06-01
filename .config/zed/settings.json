@@ -8,13 +8,15 @@
     "diagnostics": false,
     "metrics": false
   },
-  // font
+  // UI font
   "ui_font_family": "FiraCode Nerd Font Mono",
-  // TODO font weight
+  "ui_font_weight": 500,
   "ui_font_size": 18,
+  // buffer font
   "buffer_font_family": "FiraCode Nerd Font Mono",
-  "buffer_font_size": 18,
-  "terminal": {
-    // TODO cursor line
-  }
+  "buffer_font_weight": 500,
+  "buffer_font_size": 18
+  // "terminal": {
+  // TODO cursor line
+  // }
 }
