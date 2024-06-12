@@ -1,4 +1,6 @@
-# Dots
+<center>
+    <img src="./assets/dots.png" width="400px" />
+</center>
 
 > [!WARNING]
 > **These files are experimental and I am just beginning to terraform (not Terraform, we're FOSS-only here) the land to make space for the rice fields. I wouldn't recommend using these files directly, only for inspiration if anything for now. I will remove this warning once I feel they are decently stable to use "in production" (is it "production" if you're a developer and these are for your development machine? In "productelopment"?), kind of like a [warrant canary](https://www.cloudflare.com/learning/privacy/what-is-warrant-canary).**
