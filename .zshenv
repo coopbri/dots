@@ -1,3 +1,6 @@
+# https://consoledonottrack.com
+export DO_NOT_TRACK=1
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 # export PATH="/home/brian/.ebcli-virtual-env/executables:$PATH"
 export PATH=$PATH:~/.npm-global/bin
