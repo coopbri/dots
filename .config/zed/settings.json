@@ -1,6 +1,11 @@
 // Zed settings (https://zed.dev/docs/configuring-zed)
+// TODO cyan highlight color
+// TODO swap `CTRL` and `ALT` base
 {
   // core
+  "project_panel": {
+    "dock": "right"
+  },
   "theme": "Dracula",
   "vim_mode": false,
   "base_keymap": "Atom",
@@ -15,7 +20,11 @@
   // buffer font
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_weight": 500,
-  "buffer_font_size": 18
+  "buffer_font_size": 18,
+  "experimental.theme_overrides": {
+    "background.appearance": "blurred"
+    // "background": "#282A3650"
+  }
   // "terminal": {
   // TODO cursor line
   // }
