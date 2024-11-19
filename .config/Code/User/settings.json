@@ -22,7 +22,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.autoReveal": false,
-  "atomKeymap.promptV3Features": true,
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -32,13 +31,11 @@
   /**
    * Editor
    */
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.defaultFormatter": "biomejs.biome",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.fontLigatures": true,
-  // "editor.inlayHints.enabled": "on",
   "editor.inlayHints.fontSize": 10,
   "editor.inlayHints.padding": true,
   "editor.inlayHints.fontFamily": "roboto",
@@ -64,7 +61,6 @@
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.allowChords": false,
-  // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.commandsToSkipShell": [
     "language-julia.interrupt"
@@ -86,7 +82,8 @@
     "editor.defaultFormatter": "fwcd.kotlin"
   },
   "[html]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[markdown]": {
     // "editor.wordWrap": "off",
@@ -95,7 +92,6 @@
       "strings": "off",
       "other": "off"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
@@ -156,23 +152,6 @@
    * Python
    */
   "python.languageServer": "Pylance",
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  // "python.linting.mypyEnabled": true,
-  "python.linting.mypyArgs": [
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--show-column-numbers",
-    "--strict"
-  ],
-  "python.pythonPath": "~/.cache/pypoetry/virtualenvs",
-  /**
-   * Settings sync
-   */
-  // "sync.gist": "fb67a955cae9b9d3c90ff960a3f5c3e1",
-  // "sync.autoDownload": true,
-  // "sync.removeExtensions": false,
-  // "sync.syncExtensions": false,
   /**
    * Miscellaneous
    */
@@ -181,12 +160,7 @@
     "typescript",
     "typescriptreact"
   ],
-  // "eslint.debug": true,
   "eslint.codeActionsOnSave.rules": null,
-  // "prettier.disableLanguages": ["markdown", "mdx"],
-  "mdx.experimentalLanguageServer": true,
-  "liveServer.settings.donotVerifyTags": true,
-  "liveServer.settings.donotShowInfoMsg": true,
   "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.formats": [
     {
@@ -196,17 +170,9 @@
     }
   ],
   "todo-tree.highlights.enabled": true,
-  "todo-tree.tree.showScanModeButton": false,
-  /**
-   * Vim
-   */
-  // "vim.useSystemClipboard": true,
-  "vim.enableNeovim": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "WolframLanguageServer.WLServerPath": "/home/brian/Downloads/lsp-wl/",
   "povray.render.displayImageDuringRender": true,
   "povray.render.outputPath": "./output",
-  "liveServer.settings.CustomBrowser": "chrome",
   "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4 }",
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
   "gitlens.keymap": "none",
@@ -218,15 +184,11 @@
     "*.yaml": "yaml",
   },
   "vsicons.dontShowNewVersionMessage": true,
-  // "browser-preview.chromeExecutable": "/usr/bin/brave",
   "markdown-preview-enhanced.printBackground": true,
-  "quokka.showOutputOnStart": false,
-  "quokka.suppressExpirationNotifications": true,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
   "jupyter.askForKernelRestart": false,
-  "tabnine.experimentalAutoImports": true,
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path.linux": "/home/brian/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
     "vscode-kubernetes.kubectl-path.linux": "/home/brian/.vs-kubernetes/tools/kubectl/kubectl",
@@ -264,17 +226,12 @@
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  // "C_Cpp.updateChannel": "Insiders",
-  "UEIntellisenseFixes.enableFixes": true,
-  "UEIntellisenseFixes.enableOptionalFixes": true,
   "security.workspace.trust.untrustedFiles": "open",
   "[hosts]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "powershell.codeFormatting.autoCorrectAliases": true,
   "powershell.codeFormatting.useCorrectCasing": true,
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "bracketPairColorizer.depreciation-notice": false,
   "editor.minimap.enabled": false,
   "markdown-preview-enhanced.codeBlockTheme": "default.css",
   "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
@@ -293,9 +250,7 @@
   },
   "codesnap.showLineNumbers": false,
   "codesnap.showWindowControls": false,
-  "polacode.transparentBackground": true,
   "codesnap.roundedCorners": false,
-  "polacode.backgroundColor": "#b2ffee",
   "codesnap.transparentBackground": true,
   "editor.stickyScroll.enabled": true,
   "githubPullRequests.pullBranch": "never",
@@ -310,7 +265,7 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Theme",
   "[purescript]": {
     "editor.defaultFormatter": "nwolverson.ide-purescript"
   },
@@ -324,12 +279,6 @@
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
-  // "[typescriptreact]": {
-  // "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "git.openRepositoryInParentFolders": "never",
   "[scad]": {
     "editor.defaultFormatter": "JulianGmp.openscad-formatter"
@@ -339,42 +288,27 @@
   "errorLens.enabled": true,
   "jupyter.interactiveWindow.textEditor.executeSelection": false,
   "hediet.vscode-drawio.resizeImages": null,
-  "jest.autoRevealOutput": "off",
-  "jest.autoRun": {
-    "watch": "false"
-  },
   "fe.options": "--overwrite --emit=abi,bytecode,ast,tokens,yul,lowered-ast",
   "D2.previewLayout": "dagre",
   "D2.previewTheme": "Cool classics",
   "cmake.configureOnOpen": false,
-  "python.formatting.provider": "none",
   "workbench.editor.empty.hint": "hidden",
   "go.toolsManagement.autoUpdate": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "julia.enableTelemetry": false,
   "cmake.showOptionsMovedNotification": false,
   "explorer.confirmPasteNative": false,
   "editor.unicodeHighlight.invisibleCharacters": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "playwright.showTrace": true,
   "window.zoomLevel": 1,
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "glassit.alpha": 36,
   "telemetry.telemetryLevel": "off",
   "dotnetAcquisitionExtension.enableTelemetry": false,
   "serverlessIDE.telemetry.enableTelemetry": false,
   "gitlens.telemetry.enabled": false,
   "docker-explorer.enableTelemetry": false,
   "rest-client.enableTelemetry": false,
-  // "rust-analyzer.checkOnSave.command": "clippy"
-  // "arduino.path": "/usr/share/ardino",
+  "remote.SSH.remotePlatform": {
+    "*.gitpod.io": "linux"
+  },
+  "github.copilot.editor.enableAutoCompletions": false,
+  "supermaven.otherWarning": false,
 }
