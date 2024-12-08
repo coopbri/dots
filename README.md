@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./assets/dots.png" width="400px" />
+    <img src="https://rawcdn.githack.com/coopbri/assets/afa518bd7a3e50dd1256fdf91e0063b57f22d91b/dots/dots.png" width="400px" />
 </div>
 
 > [!WARNING]
