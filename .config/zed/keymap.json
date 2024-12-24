@@ -1,11 +1,17 @@
 // Zed keymap overrides (https://zed.dev/docs/key-bindings)
 [
+  // TODO A and Shift+A in dock to create file/folder
   {
     "context": "Editor",
     "bindings": {
       // buffer navigation
       "ctrl-shift-tab": "pane::ActivatePrevItem",
-      "ctrl-tab": "pane::ActivateNextItem"
+      "ctrl-tab": "pane::ActivateNextItem",
+      // TODO https://github.com/zed-industries/zed/issues/8787
+      // open definition
+      // "alt-click": "editor::GoToDefinition"
+      "ctrl-shift-x": "zed::Extensions",
+      "ctrl-d": "editor::SelectNext"
     }
   },
   {
@@ -16,9 +22,19 @@
       "ctrl-enter": "editor::NewlineBelow",
       // line movement
       "ctrl-up": "editor::MoveLineUp",
-      "ctrl-down": "editor::MoveLineDown"
+      "ctrl-down": "editor::MoveLineDown",
+      "alt-z": "editor::ToggleSoftWrap"
     }
   },
+  // TODO ctrl-w, etc. capture in shell instead of zed
+  // {
+  //   "context": "Terminal",
+  //   "bindings": {
+  //     // TODO copy or cancel based on context
+  //     "ctrl-c": "terminal::Copy",
+  //     "ctrl-v": "terminal::Paste"
+  //   }
+  // },
   {
     "context": "Workspace",
     "bindings": {
