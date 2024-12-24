@@ -1,11 +1,56 @@
 // Zed settings (https://zed.dev/docs/configuring-zed)
 // TODO cyan highlight color
 // TODO swap `CTRL` and `ALT` base
+// TODO text wrap by default
+// TODO disable middle click paste
 {
+  // "lsp": {
+  // "biome": {
+  //     "settings": {
+  //       "require_config_file": true
+  //     }
+  //   }
+  // },
+  // "formatter": {
+  //   "code_actions": {
+  //     "source.fixAll.biome": true
+  //   }
+  // },
+  // "format_on_save": "on",
+  // "code_actions_on_format": {
+  // "source.fixAll.biome": true,
+  // "source.organizeImports.biome": true
+  // },
   // core
+  "show_inline_completions": false,
+  "languages": {
+    "TypeScript": {
+      "show_inline_completions": true
+    },
+    "TSX": {
+      "show_inline_completions": true
+    },
+    "Markdown": {
+      "show_inline_completions": true
+    },
+    "Plain Text": {
+      "show_inline_completions": false
+    }
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
   "project_panel": {
     "dock": "right"
   },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "soft_wrap": "editor_width",
   "theme": "Dracula",
   "vim_mode": false,
   "base_keymap": "Atom",
@@ -13,17 +58,21 @@
     "diagnostics": false,
     "metrics": false
   },
+  "tabs": {
+    "file_icons": true
+  },
+  // TODO ligatures, only some render
   // UI font
   "ui_font_family": "FiraCode Nerd Font Mono",
   "ui_font_weight": 500,
-  "ui_font_size": 18,
+  "ui_font_size": 15,
   // buffer font
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_weight": 500,
-  "buffer_font_size": 18,
+  "buffer_font_size": 13,
   "experimental.theme_overrides": {
     "background.appearance": "blurred"
-    // "background": "#282A3650"
+    // "background": "#282aa3650"
   }
   // "terminal": {
   // TODO cursor line
