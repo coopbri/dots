@@ -1,0 +1,9 @@
+background = 282c34
+background-opacity = 0.9
+foreground = ffffff
+font-size = 16
+window-decoration = false
+font-family = "FiraCode Nerd Font Mono"
+theme = Dracula
+window-padding-x = 12 
+window-padding-y = 8
