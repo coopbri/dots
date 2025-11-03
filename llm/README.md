@@ -4,7 +4,7 @@ Custom prompts and settings for LLMs.
 
 ## Structure
 
-- `grok.md`: General, custom instructions for Grok (paste into "Custom Instructions" on Grok web app at https://grok.com).
+- [`grok.md`](grok.md): General, custom instructions for Grok (paste into "Custom Instructions" on Grok web app at https://grok.com).
 
 ## Usage
 
