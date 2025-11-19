@@ -4,8 +4,11 @@ Custom prompts and settings for LLMs.
 
 ## Structure
 
-<a href="https://grok.com" target="_blank" rel="noopener noreferrer">
+<a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
   <img src="/assets/chatgpt.png" width="100" align="middle" />
+</a>
+
+<a href="https://grok.com" target="_blank" rel="noopener noreferrer">
   <img src="/assets/grok.png" width="100" align="middle" />
 </a>
 
