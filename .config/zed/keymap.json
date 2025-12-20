@@ -5,14 +5,15 @@
     "context": "Editor",
     "bindings": {
       // buffer navigation
-      "ctrl-shift-tab": "pane::ActivatePrevItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
       "ctrl-tab": "pane::ActivateNextItem",
       // TODO https://github.com/zed-industries/zed/issues/8787
       // open definition
       // "alt-click": "editor::GoToDefinition"
       "ctrl-shift-x": "zed::Extensions",
-      "ctrl-d": "editor::SelectNext"
-    }
+      "ctrl-d": "editor::SelectNext",
+      "alt-shift-l": "editor::SplitSelectionIntoLines",
+    },
   },
   {
     "context": "Editor && mode == full",
@@ -23,22 +24,37 @@
       // line movement
       "ctrl-up": "editor::MoveLineUp",
       "ctrl-down": "editor::MoveLineDown",
-      "alt-z": "editor::ToggleSoftWrap"
-    }
+      "alt-z": "editor::ToggleSoftWrap",
+    },
   },
-  // TODO ctrl-w, etc. capture in shell instead of zed
-  // {
-  //   "context": "Terminal",
-  //   "bindings": {
-  //     // TODO copy or cancel based on context
-  //     "ctrl-c": "terminal::Copy",
-  //     "ctrl-v": "terminal::Paste"
-  //   }
-  // },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // disable default copy keybind
+      "ctrl-shift-c": null,
+      // disable default paste keybind
+      "ctrl-shift-v": null,
+      "ctrl-v": "terminal::Paste",
+    },
+  },
+  {
+    "context": "Terminal && selection",
+    "bindings": {
+      // if selecting text, enable contextual keybind
+      "ctrl-c": "terminal::Copy",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-v": "terminal::Paste",
+    },
+  },
+
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-\\": "workspace::ToggleLeftDock"
-    }
-  }
+      "ctrl-\\": "workspace::ToggleLeftDock",
+    },
+  },
 ]
