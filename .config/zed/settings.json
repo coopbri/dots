@@ -11,55 +11,46 @@
   //     }
   //   }
   // },
-  // "formatter": {
-  //   "code_actions": {
-  //     "source.fixAll.biome": true
-  //   }
-  // },
-  // "format_on_save": "on",
-  // "code_actions_on_format": {
-  // "source.fixAll.biome": true,
-  // "source.organizeImports.biome": true
-  // },
-  // core
-  "show_inline_completions": false,
-  "languages": {
-    "TypeScript": {
-      "show_inline_completions": true
-    },
-    "TSX": {
-      "show_inline_completions": true
-    },
-    "Markdown": {
-      "show_inline_completions": true
-    },
-    "Plain Text": {
-      "show_inline_completions": false
-    }
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.fixAll.biome": true,
+    // TODO doesn't seem to work
+    // "source.organizeImports.biome": true,
   },
-  "assistant": {
+  // core
+  "icon_theme": "Material Icon Theme",
+  "agent": {
+    "play_sound_when_agent_done": true,
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4",
     },
-    "version": "2"
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "features": {
-    "inline_completion_provider": "supermaven"
+    "edit_prediction_provider": "zed",
+  },
+  "edit_predictions": {
+    "mode": "subtle",
   },
   "soft_wrap": "editor_width",
-  "theme": "Dracula",
+  "theme": {
+    "mode": "dark",
+    "light": "Dracula",
+    "dark": "Dracula Solid",
+  },
   "vim_mode": false,
   "base_keymap": "Atom",
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "tabs": {
-    "file_icons": true
+    "file_icons": true,
   },
   // TODO ligatures, only some render
   // UI font
@@ -71,9 +62,9 @@
   "buffer_font_weight": 500,
   "buffer_font_size": 13,
   "experimental.theme_overrides": {
-    "background.appearance": "blurred"
+    "background.appearance": "blurred",
     // "background": "#282aa3650"
-  }
+  },
   // "terminal": {
   // TODO cursor line
   // }
