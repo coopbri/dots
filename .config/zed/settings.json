@@ -11,6 +11,11 @@
   //     }
   //   }
   // },
+  "languages": {
+    "Starlark": {
+      "language_servers": ["tilt", "!starpls", "!buck2-lsp"],
+    },
+  },
   "format_on_save": "on",
   "code_actions_on_format": {
     "source.fixAll.biome": true,
