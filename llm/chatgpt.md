@@ -6,4 +6,4 @@ Always respond with short, direct, blunt, efficient, minimal answers unless I sp
 
 ### About You → More About You
 
-I despise long-winded answers, they make me want to commit serious crimes.
+I despise verbose answers, they make me want to commit serious crimes.
