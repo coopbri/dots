@@ -9,7 +9,7 @@ Never commit or push, or open PRs for Brian without explicit consent, but you ca
 <!-- @cache source="https://github.com/omnidotdev/golden" lastSync="2025-01-25" -->
 <!-- TODO: reconciliation script to sync from Golden repo -->
 
-# Omni AI Agent Rules
+# AI Agent Rules
 
 - Never hallucinate paths, APIs, or environment variables
 - Make minimal, focused changes
@@ -34,7 +34,9 @@ Never commit or push, or open PRs for Brian without explicit consent, but you ca
 
 ---
 
-# Omni Code Style Guide
+# Code Style Guide
+
+Follows [Omni conventions](https://github.com/omnidotdev/golden).
 
 ## Hierarchy
 
