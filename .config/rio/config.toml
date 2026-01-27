@@ -1,4 +1,7 @@
 theme = "dracula"
+confirm-before-quit = false
+padding-x = 24
+padding-y = [16, 16]
 
 [cursor]
 shape = "beam"
@@ -6,15 +9,12 @@ shape = "beam"
 [window]
 opacity = 0.9
 
-padding-x = 16
-padding-y = [12, 12]
-
 [fonts]
 family = "FiraCode Nerd Font Mono"
 size = 18
 
 [fonts.regular]
-weight = 600
+weight = 500
 
 [keyboard]
 use-kitty-keyboard-protocol = true
