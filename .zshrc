@@ -74,7 +74,7 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages git poetry nvm ssh-agent zsh-autosuggestions zsh-syntax-highlighting helm you-should-use $plugins)
+plugins=(colored-man-pages git ssh-agent zsh-autocomplete zsh-autosuggestions zsh-syntax-highlighting helm you-should-use $plugins)
 # plugins=(...dotenv)
 
 # User configuration
@@ -150,6 +150,15 @@ alias pullaf="ls | xargs -P10 -I{} git -C {} pull"
 
 # git
 # alias git="gix"
+
+alias gcwip="git commit -m 'chore: wip'"
+alias gucci="git commit -m 'chore: trigger ci' --allow-empty"
+alias gcinit="gcmsg 'chore: initial commit' --allow-empty --no-verify"
+
+# Solana
+alias sol="solana"
+
+# alias claude='f(){ claude -p "$*" | lolcat; }; f'
 
 # Vim
 alias v="nvim"
@@ -232,6 +241,8 @@ alias mine="~/Data/Cloud/Nextcloud/scripts/ethminer.sh"
 
 alias cfg="/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME"
 
+alias shadd="bx --bun shadcn@latest add"
+
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # tabtab source for packages
@@ -243,6 +254,7 @@ export YVM_DIR=/home/brian/.yvm
 
 # bit
 export PATH="$PATH:/home/brian/bin"
+export PATH="$HOME/.local/bin:$PATH"
 # bit end
 
 # Created by `pipx` on 2022-08-05 23:02:56
@@ -264,3 +276,7 @@ export PATH="$PATH:/home/brian/.foundry/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/mcli mcli
+
+# grafbase
+export PATH="/home/brian/.grafbase/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
