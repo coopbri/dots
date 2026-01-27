@@ -11,14 +11,32 @@ opacity = 0.9
 
 [fonts]
 family = "FiraCode Nerd Font Mono"
-size = 18
+size = 20
+extras = [
+  { family = "Noto Sans Math" },
+  { family = "Noto Sans Symbols 2" },
+]
+# TODO: symbol-map for U+23F4-23FA (⏵ etc) - FiraCode lacks these, need IosevkaTerm or similar
 
 [fonts.regular]
 weight = 500
 
 [keyboard]
-use-kitty-keyboard-protocol = true
+use-kitty-keyboard-protocol = false
 
 [navigation]
-mode = "BottomTab"
-use-current-path = true
+mode = "Bookmark"
+clickable = true
+current-working-directory = true
+
+[bindings]
+keys = [
+  { key = "v", with = "control", action = "Paste" },
+  { key = "enter", with = "shift", esc = "\u001b\r" },
+]
+
+# TODO: clickable links via hints.rules - syntax from docs doesn't work in v0.2.37
+# TODO: copy_or_interrupt like kitty/iTerm2 - https://github.com/raphamorim/rio/issues/953
+
+[colors]
+background = '#525100'
