@@ -20,5 +20,5 @@ weight = 600
 use-kitty-keyboard-protocol = true
 
 [navigation]
-mode = "Plain"
+mode = "BottomTab"
 use-current-path = true
