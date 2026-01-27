@@ -7,6 +7,12 @@
 
 My personal dotfiles and system configuration.
 
+## How to Use
+
+The process is inspired by https://www.atlassian.com/git/tutorials/dotfiles.
+
+## Gallery
+
 <div style="display: flex; justify-content: center; gap: 12px;">
     <img src="https://raw.githubusercontent.com/coopbri/assets/master/dots/blank-workspace.png" width="444" />
     <img src="https://raw.githubusercontent.com/coopbri/assets/master/dots/tiled-workspace.png" width="444" />
@@ -21,7 +27,7 @@ My personal dotfiles and system configuration.
 | Bootloader           | [![refind](https://img.shields.io/badge/Refind-94e2d5?style=for-the-badge)](https://www.rodsbooks.com/refind/)                                                                                                                                                                                                         |
 | Operating System     | [![arch](https://img.shields.io/badge/Arch%20Linux-94e2d5?style=for-the-badge)](https://archlinux.org/)                                                                                                                                                                                                                |
 | Compositor (Wayland) | [![hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge)](https://hyprland.org/)                                                                                                                                                                                                                 |
-| Terminal             | [![kitty](https://img.shields.io/badge/Kitty-cba6f7?style=for-the-badge)](https://sw.kovidgoyal.net/kitty/)                                                                                                                                                                                                            |
+| Terminal             | [![rio](https://img.shields.io/badge/Rio-cba6f7?style=for-the-badge)](https://rioterm.com/)                                                                                                                                                                                                            |
 | Shell                | [![zsh](https://img.shields.io/badge/Zsh-f2cdcd?style=for-the-badge)](https://www.zsh.org/) [![oh-my-zsh](https://img.shields.io/badge/Oh%20My%20Zsh-f2cdcd?style=for-the-badge)](https://ohmyz.sh/) [![p10k](https://img.shields.io/badge/p10k-f2cdcd?style=for-the-badge)](https://github.com/romkatv/powerlevel10k) |
 | Bar                  | [![waybar](https://img.shields.io/badge/Waybar-cdd6f4?style=for-the-badge)](https://github.com/Alexays/Waybar)                                                                                                                                                                                                         |
 | Launcher             | [![wofi](https://img.shields.io/badge/Wofi-fab387?style=for-the-badge)](https://hg.sr.ht/~scoopta/wofi)                                                                                                                                                                                                                |
@@ -37,9 +43,9 @@ My personal dotfiles and system configuration.
 
 ### Applications
 
-| Component        | Selection                                                                                                                                                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Component        | Selection                                                                                                                                                                                                                                                                                                    |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | IDE              | [![vs code](https://img.shields.io/badge/VS%20Code-94e2d5?style=for-the-badge)](https://code.visualstudio.com/) [![zed](https://img.shields.io/badge/Zed-94e2d5?style=for-the-badge)](https://zed.dev/) [![helix](https://img.shields.io/badge/Helix-94e2d5?style=for-the-badge)](https://helix-editor.com/) |
-| Browser          | [![firefox](https://img.shields.io/badge/Firefox-fab387?style=for-the-badge)](https://www.mozilla.org/en-US/firefox) [![brave](https://img.shields.io/badge/Brave-fab387?style=for-the-badge)](https://brave.com/)   |
-| Email, RSS, Atom | [![thunderbird](https://img.shields.io/badge/Thunderbird-a6e3a1?style=for-the-badge)](https://www.thunderbird.net/)                                                                                                  |
-| Music            | [![spotify](https://img.shields.io/badge/Spotify-94e2d5?style=for-the-badge)](https://www.spotify.com/)                                                                                                              |
+| Browser          | [![firefox](https://img.shields.io/badge/Firefox-fab387?style=for-the-badge)](https://www.mozilla.org/en-US/firefox) [![brave](https://img.shields.io/badge/Brave-fab387?style=for-the-badge)](https://brave.com/)                                                                                           |
+| Email, RSS, Atom | [![thunderbird](https://img.shields.io/badge/Thunderbird-a6e3a1?style=for-the-badge)](https://www.thunderbird.net/)                                                                                                                                                                                          |
+| Music            | [![spotify](https://img.shields.io/badge/Spotify-94e2d5?style=for-the-badge)](https://www.spotify.com/)                                                                                                                                                                                                      |
