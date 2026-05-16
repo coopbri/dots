@@ -91,6 +91,15 @@ plugins=(colored-man-pages git ssh-agent zsh-autocomplete zsh-autosuggestions zs
 #   export EDITOR='mvim'
 # fi
 
+# Set terminal background color on the fly (OSC 11)
+bg() {
+  if [[ "$1" == "reset" ]]; then
+    printf '\e]111;\e\\'
+  else
+    printf '\e]11;%s\e\\' "$1"
+  fi
+}
+
 function mkcd {
   last=$(eval "echo \$$#")
   if [ ! -n "$last" ]; then
@@ -264,6 +273,12 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 eval "$(starship init zsh)"
+
+# Emit OSC 7 for terminal CWD tracking (Rio new tabs, etc)
+__osc7_cwd() {
+  printf '\e]7;file://%s\e\\' "${PWD}"
+}
+add-zsh-hook precmd __osc7_cwd
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/home/brian/.rd/bin:$PATH"
