@@ -296,6 +296,8 @@ complete -o nospace -C /usr/bin/mcli mcli
 # grafbase
 export PATH="/home/brian/.grafbase/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 # Load API secrets from Bitwarden via rbw (silent no-op if agent locked).
 # Unlock once per session: `rbw unlock` (then `exec zsh` to pick up secrets).
