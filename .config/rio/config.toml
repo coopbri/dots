@@ -1,5 +1,6 @@
 theme = "dracula"
 confirm-before-quit = false
+use-fork = false
 padding-x = 24
 padding-y = [16, 16]
 
@@ -25,18 +26,18 @@ weight = 500
 use-kitty-keyboard-protocol = false
 
 [navigation]
-mode = "Bookmark"
+mode = "BottomTab"
 clickable = true
 current-working-directory = true
 
 [bindings]
 keys = [
-  { key = "v", with = "control", action = "Paste" },
+  { key = "c", with = "control | shift", action = "Copy" },
+  { key = "v", with = "control | shift", action = "Paste" },
   { key = "enter", with = "shift", esc = "\u001b\r" },
 ]
 
 # TODO: clickable links via hints.rules - syntax from docs doesn't work in v0.2.37
-# TODO: copy_or_interrupt like kitty/iTerm2 - https://github.com/raphamorim/rio/issues/953
+# TODO: revert to ctrl+c once Rio adds CopyOrInterrupt (https://github.com/raphamorim/rio/issues/953)
 
 [colors]
-background = '#525100'
