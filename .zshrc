@@ -238,6 +238,7 @@ alias k="kubectl"
 alias mk="minikube"
 alias kctx="kubectx"
 alias kns="kubens"
+export KUBECONFIG=~/.kube/fractal.yaml
 
 # Tilt
 alias t="tilt"
