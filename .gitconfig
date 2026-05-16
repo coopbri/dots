@@ -17,6 +17,7 @@
 [user]
 	name = Brian Cooper
 	email = brian@brian-cooper.com
+	signingkey = /home/brian/.ssh/id_ed25519.pub
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
@@ -27,3 +28,11 @@
 	prune = true
 [http]
 	postBuffer = 52428800
+[credential]
+	helper = store
+[pager]
+	diff = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
