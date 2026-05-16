@@ -12,6 +12,7 @@ export PATH=$PATH:$HOME/.krew/bin
 export PATH=$PATH:$HOME/.local/share/solana/install/active_release/bin
 
 export EDITOR=vim
+export TZ="America/Denver"
 
 export FE_PATH="/usr/bin/fe"
 
