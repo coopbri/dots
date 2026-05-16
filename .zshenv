@@ -17,10 +17,12 @@ export TZ="America/Denver"
 export FE_PATH="/usr/bin/fe"
 
 # Required for Android sdkmanager (for Flutter, check this later)
-export JAVA_HOME="/usr/lib/jvm/default"
-export ANDROID_HOME="/opt/android-sdk"
-export NDK_HOME="/opt/android-ndk"
-export ANDROID_SDK_ROOT="/opt/android-sdk"
+# export JAVA_HOME="/usr/lib/jvm/default"
+# export ANDROID_HOME="/opt/android-sdk"
+# export NDK_HOME="/opt/android-ndk"
+# export ANDROID_SDK_ROOT="/opt/android-sdk"
+export ANDROID_HOME=~/Android/Sdk
+export ANDROID_SDK_ROOT=/home/brian/Android/Sdk
 
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
