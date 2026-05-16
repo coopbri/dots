@@ -11,6 +11,15 @@
   //     }
   //   }
   // },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "languages": {
     "CSS": {
       "language_servers": ["tailwindcss-language-server"],
@@ -29,6 +38,7 @@
   // core
   "icon_theme": "Material Icon Theme",
   "agent": {
+    "dock": "right",
     "play_sound_when_agent_done": true,
     "default_profile": "write",
     "always_allow_tool_actions": true,
