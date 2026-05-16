@@ -35,6 +35,9 @@
       // disable default paste keybind
       "ctrl-shift-v": null,
       "ctrl-v": "terminal::Paste",
+      // tab navigation
+      "ctrl-shift-t": "pane::ActivatePrevItem",
+      "ctrl-t": "pane::ActivateNextItem",
     },
   },
   {
