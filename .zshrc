@@ -280,3 +280,14 @@ complete -o nospace -C /usr/bin/mcli mcli
 # grafbase
 export PATH="/home/brian/.grafbase/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# Load API secrets from Bitwarden via rbw (silent no-op if agent locked).
+# Unlock once per session: `rbw unlock` (then `exec zsh` to pick up secrets).
+load_secrets() {
+  command -v rbw >/dev/null 2>&1 || return
+  rbw unlocked 2>/dev/null || return
+  export OPENAI_API_KEY="$(rbw get openai-api-key 2>/dev/null)"
+  export CF_API_TOKEN="$(rbw get cloudflare-api-token 2>/dev/null)"
+  export HF_TOKEN="$(rbw get hf-token 2>/dev/null)"
+}
+load_secrets

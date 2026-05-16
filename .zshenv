@@ -33,3 +33,5 @@ PLASMA_USE_QT_SCALING=1
 
 # https://github.com/nodejs/help/issues/1887#issuecomment-1537081657
 export NODE_OPTIONS="--dns-result-order=ipv4first"
+
+# API keys loaded from Bitwarden in .zshrc (see load_secrets)
