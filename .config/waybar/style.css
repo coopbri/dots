@@ -29,7 +29,9 @@ window#waybar.hidden {
   border-radius: 4px;
   background-color: #1e1e2e;
   color: #cdd6f4;
-  /* cursor: pointer; */
+  /* No `cursor: pointer`: waybar links GTK3 (libgtk-3.so.0), and GTK3 CSS
+     does not accept the cursor property. Will be possible once upstream
+     waybar finishes its GTK4 migration. */
 }
 
 #workspaces button.active {
