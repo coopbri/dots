@@ -39,9 +39,11 @@
   "icon_theme": "Material Icon Theme",
   "agent": {
     "dock": "right",
-    "play_sound_when_agent_done": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "play_sound_when_agent_done": "always",
     "default_profile": "write",
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4",
@@ -50,10 +52,8 @@
   "project_panel": {
     "dock": "right",
   },
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
   },
   "soft_wrap": "editor_width",
