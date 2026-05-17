@@ -40,10 +40,9 @@
         "backlight",
         // "keyboard-state",
         // "sway/language",
-        "battery",
+        "battery"
         // "battery#bat2",
         // "clock",
-        "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -257,12 +256,6 @@
         "on-scroll-down": "playerctl next"
     },
     // TODO extend "clock" module
-    // "custom/utc": {},
-    "custom/power": {
-        "format": "󰤆",
-        "tooltip": false
-        // TODO configure wofi power menu
-        // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
-    }
+    // "custom/utc": {}
 }
 

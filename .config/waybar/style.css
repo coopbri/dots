@@ -52,7 +52,6 @@ window#waybar.hidden {
 #memory,
 /* TODO auto-map over custom modules */
 #custom-spotify,
-#custom-power,
 #battery,
 #backlight,
 #pulseaudio,
@@ -64,10 +63,6 @@ window#waybar.hidden {
   padding: 6px 12px;
   background-color: #1e1e2e;
   color: #181825;
-}
-
-#custom-power {
-  margin-right: 6px;
 }
 
 #custom-logo {
@@ -128,10 +123,6 @@ window#waybar.hidden {
 
 #clock {
   background-color: #cba6f7;
-}
-
-#custom-power {
-  background-color: #f2cdcd;
 }
 
 #custom-spotify {
