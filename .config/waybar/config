@@ -61,6 +61,14 @@
     //         "default": ""
     //     }
     // },
+    // Requires waybar built from master (AUR `waybar-git`) under Hyprland >= 0.54
+    // with a Lua config. Stable waybar 0.15.0 sends legacy `dispatch workspace N`
+    // over IPC, which Hyprland's Lua dispatcher rejects as invalid syntax.
+    // Upstream fix: alexays/Waybar@e17c0d9 (2026-04-29).
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{name}"
+    },
     "hyprland/window": {
         //"format": "{}" // this is default
         "format": "<span font='9' rise='-4444'>{}</span>"
