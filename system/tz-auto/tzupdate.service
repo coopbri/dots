@@ -1,0 +1,11 @@
+[Unit]
+Description=Set system timezone from IP geolocation
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tz-from-ip
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Set system timezone from IP geolocation
+zone=$(curl -fsS --max-time 5 https://ipapi.co/timezone) || exit 0
+case "$zone" in
+    */*) timedatectl set-timezone "$zone" ;;
+esac

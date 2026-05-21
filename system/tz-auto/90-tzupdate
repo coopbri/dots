@@ -1,0 +1,7 @@
+#!/bin/sh
+# Re-run tz-from-ip when NetworkManager brings a connection up
+case "$2" in
+    up|connectivity-change)
+        /usr/local/bin/tz-from-ip >/dev/null 2>&1 || true
+        ;;
+esac
