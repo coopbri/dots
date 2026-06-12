@@ -53,6 +53,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("wl-clip-persist --clipboard regular")
     hl.exec_cmd("flameshot")
     hl.exec_cmd("blueman-applet")
+    hl.exec_cmd("mullvad-vpn")
 
     -- workspace-pinned launches (declarative workspace rules below pin them to workspaces)
     hl.exec_cmd(browser)
