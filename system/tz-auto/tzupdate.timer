@@ -1,0 +1,12 @@
+[Unit]
+Description=Periodically set system timezone from IP geolocation
+
+[Timer]
+# Run shortly after boot (network/DNS settling handled by the script's retry loop)
+OnBootSec=20s
+# Re-check hourly so the zone self-corrects after you move
+OnUnitActiveSec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,6 +1,29 @@
 #!/bin/sh
-# Set system timezone from IP geolocation
-zone=$(curl -fsS --max-time 5 https://ipapi.co/timezone) || exit 0
-case "$zone" in
-    */*) timedatectl set-timezone "$zone" ;;
-esac
+# Set system timezone from IP geolocation.
+# Retries because DNS/network may not be ready immediately after boot,
+# and falls back to a second provider if the first is unreachable.
+get_zone() {
+    curl -fsS --max-time 5 https://ipapi.co/timezone 2>/dev/null \
+        || curl -fsS --max-time 5 https://ipinfo.io/timezone 2>/dev/null
+}
+
+zone=""
+i=0
+while [ "$i" -lt 12 ]; do
+    zone=$(get_zone)
+    case "$zone" in
+        */*) break ;;
+    esac
+    zone=""
+    i=$((i + 1))
+    sleep 5
+done
+
+[ -n "$zone" ] || exit 0
+
+current=$(timedatectl show -p Timezone --value 2>/dev/null)
+[ "$zone" = "$current" ] && exit 0
+
+timedatectl set-timezone "$zone"
+# Waybar caches the zone at startup, so reload it (SIGUSR2) to redraw the clock
+pkill -SIGUSR2 waybar 2>/dev/null || true
