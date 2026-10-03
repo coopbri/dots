@@ -1,0 +1,43 @@
+theme = "dracula"
+confirm-before-quit = false
+use-fork = false
+padding-x = 24
+padding-y = [16, 16]
+
+[cursor]
+shape = "beam"
+
+[window]
+opacity = 0.9
+
+[fonts]
+family = "FiraCode Nerd Font Mono"
+size = 20
+extras = [
+  { family = "Noto Sans Math" },
+  { family = "Noto Sans Symbols 2" },
+]
+# TODO: symbol-map for U+23F4-23FA - FiraCode lacks these, need IosevkaTerm or similar
+
+[fonts.regular]
+weight = 500
+
+[keyboard]
+use-kitty-keyboard-protocol = false
+
+[navigation]
+mode = "BottomTab"
+clickable = true
+current-working-directory = true
+hide-if-single = true
+
+[bindings]
+keys = [
+  { key = "c", with = "control | shift", action = "Copy" },
+  { key = "v", with = "control | shift", action = "Paste" },
+  { key = "v", with = "control", action = "Paste" },
+  { key = "enter", with = "shift", esc = "\u001b\r" },
+]
+
+# TODO: clickable links via hints.rules
+# TODO: revert to ctrl+c once CopyOrInterrupt lands

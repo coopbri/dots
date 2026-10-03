@@ -1,0 +1,28 @@
+[colors]
+background = "#282a36"
+foreground = "#f8f8f2"
+cursor = "#f8f8f2"
+selection-background = "#44475a"
+selection-foreground = "#f8f8f2"
+tabs = "#44475a"
+tabs-active = "#bd93f9"
+
+# Normal colors
+black = "#21222c"
+red = "#ff5555"
+green = "#50fa7b"
+yellow = "#f1fa8c"
+blue = "#bd93f9"
+magenta = "#ff79c6"
+cyan = "#8be9fd"
+white = "#f8f8f2"
+
+# Bright colors
+light-black = "#6272a4"
+light-red = "#ff6e6e"
+light-green = "#69ff94"
+light-yellow = "#ffffa5"
+light-blue = "#d6acff"
+light-magenta = "#ff92df"
+light-cyan = "#a4ffff"
+light-white = "#ffffff"
