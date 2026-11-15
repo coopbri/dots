@@ -20,7 +20,7 @@ hl.monitor({
 ---------------------
 
 local terminal    = "omni-terminal"
-local fileManager = "dolphin"
+local fileManager = "/home/brian/.local/bin/sift /home/brian"
 local browser     = "firefox"
 local codeEditor  = "code"
 local menu        = "wofi"
@@ -30,12 +30,27 @@ local menu        = "wofi"
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("XCURSOR_THEME",        "transparent")
-hl.env("XCURSOR_SIZE",         "1")
+-- Cursor for XWayland apps (e.g. Spotify); match GTK's breeze_cursors/24. A
+-- "transparent"/1 combo here previously shrank the cursor to a dot in X11 apps
+hl.env("XCURSOR_THEME",        "breeze_cursors")
+hl.env("XCURSOR_SIZE",         "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+-- Force the Breeze widget style for both Qt5 and Qt6 from one env var (sidesteps the
+-- qt5ct/qt6ct platform-theme name mismatch). The dark palette itself (Base/AlternateBase,
+-- so item-view rows stop alternating light) comes from the BreezeDark color scheme written
+-- into ~/.config/kdeglobals, which every KDE Qt app reads directly
+hl.env("QT_STYLE_OVERRIDE",    "Breeze")
 hl.env("LIBVA_DRIVER_NAME",    "iHD")
 hl.env("XDG_SESSION_TYPE",     "wayland")
 hl.env("WLR_NO_HARDWARE_CURSORS", "1")
+-- Arch ships its app menu as arch-applications.menu; without this, KDE's ksycoca
+-- finds no applications, so Dolphin can never resolve default apps (always "Open With")
+hl.env("XDG_MENU_PREFIX",      "arch-")
+-- Mullvad split tunneling mounts a cgroup v1 net_cls controller, which knocks
+-- systemd 256+ out of pure-unified mode and breaks transient-unit creation. KIO
+-- launches apps as app-*@*.service transient units, so Dolphin can't open mpv et al
+-- ("Unit not found"). Forcing fork/exec sidesteps systemd entirely, keeping Mullvad intact
+hl.env("_KDE_APPLICATIONS_AS_FORKING", "1")
 
 
 -------------------
@@ -44,10 +59,18 @@ hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 
 -- https://wiki.hypr.land/Configuring/Basics/Autostart/
 hl.on("hyprland.start", function()
+    -- bind the systemd user session to graphical-session.target so xdg-desktop-portal (and flameshot) can start
+    hl.exec_cmd("systemctl --user start hyprland-session.target")
+
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("swaync")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+    -- KDE's kiod6 hosts the kmtpd module that owns the MTP device list. Plasma starts
+    -- kiod6 with the session but Hyprland does not, and D-Bus activation fails here
+    -- ("unknown unit"), so Dolphin's mtp worker finds zero devices and every phone udi
+    -- reads as "does not exist". Starting it here fixes MTP phone access
+    hl.exec_cmd("/usr/lib/kf6/kiod6")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("wl-clip-persist --clipboard regular")
@@ -170,6 +193,30 @@ hl.window_rule({
     name      = "pin-thunderbird-ws4",
     match     = { class = "^org\\.mozilla\\.Thunderbird$" },
     workspace = "4 silent",
+})
+
+-- Float + center the Sift portal file picker so it opens as a dialog rather than
+-- tiling. Matched on title (the class "sift" is shared with the normal Sift app).
+hl.window_rule({
+    name  = "float-sift-picker",
+    match = { title = "^Sift File Picker$" },
+    float = true,
+})
+
+hl.window_rule({
+    name   = "center-sift-picker",
+    match  = { title = "^Sift File Picker$" },
+    center = true,
+})
+
+-- Grab keyboard focus when the picker shows. It is an already-running D-Bus
+-- service whose window is re-shown per request, so the show reads as an
+-- xdg-activation request, which the global misc:focus_on_activate=false drops.
+-- Scope focus-on-activate to just the picker so you can type the filename at once.
+hl.window_rule({
+    name              = "focus-sift-picker",
+    match             = { title = "^Sift File Picker$" },
+    focus_on_activate = true,
 })
 
 

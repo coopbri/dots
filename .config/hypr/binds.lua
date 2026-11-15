@@ -5,7 +5,7 @@ local mainMod = "SUPER"
 
 -- Programs (kept in sync with hyprland.lua)
 local terminal    = "omni-terminal"
-local fileManager = "dolphin"
+local fileManager = "/home/brian/.local/bin/sift /home/brian"
 local browser     = "firefox"
 local codeEditor  = "code"
 local menu        = "wofi"
@@ -28,6 +28,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 -----------------------
 
 hl.bind(mainMod .. " + R",      hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + D",      hl.dsp.exec_cmd("/home/brian/.local/bin/dictate toggle")) -- voice dictation toggle
 hl.bind("ALT + SPACE",          hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd(fileManager))
