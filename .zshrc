@@ -226,6 +226,10 @@ alias bleach="bleachbit -c --preset"
 
 alias tf="terraform"
 
+# Prefer the official pulumi install (~/.pulumi/bin) over the AUR /usr/bin/pulumi:
+# pacman is pinned at 3.242.0, which has a regression that breaks nodejs dynamic
+# providers (404 fetching a nonexistent pulumi-nodejs plugin). 3.245.0 fixes it.
+export PATH="$HOME/.pulumi/bin:$PATH"
 alias p="pulumi"
 
 # Gaming
@@ -309,3 +313,18 @@ load_secrets() {
   export HF_TOKEN="$(rbw get hf-token 2>/dev/null)"
 }
 load_secrets
+
+# claude-restore: resume the session handed to this terminal, once. The env var is
+# inherited by every tab, so the atomic mv makes only the first shell claim it.
+# CLAUDE_RESTORE_BG optionally sets that tab's background color first
+if [[ -o interactive && -n $CLAUDE_RESTORE_PENDING ]]; then
+  () {
+    local f=$CLAUDE_RESTORE_PENDING
+    unset CLAUDE_RESTORE_PENDING
+    mv "$f" "$f.claimed" 2>/dev/null || return
+    rm -f "$f.claimed"
+    [[ -n $CLAUDE_RESTORE_BG ]] && bg "$CLAUDE_RESTORE_BG"
+    unset CLAUDE_RESTORE_BG
+    claude --resume "${f:t}"
+  }
+fi
