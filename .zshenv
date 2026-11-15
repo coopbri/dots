@@ -23,7 +23,10 @@ export FE_PATH="/usr/bin/fe"
 export ANDROID_HOME=~/Android/Sdk
 export ANDROID_SDK_ROOT=/home/brian/Android/Sdk
 
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# Compute the per-shell gem user dir, but tolerate the system ruby 3.4.8
+# intermittently segfaulting in rubygems on startup: swallow the crash dump and
+# fall back to the conventional path so a flaky ruby never spams the shell.
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir' 2>/dev/null || echo "${XDG_DATA_HOME:-$HOME/.local/share}/gem/ruby/3.4.0")"
 export PATH="$PATH:$GEM_HOME/bin"
 
 # Enable Plasma QT scaling (experimental, not sure if this works well)
