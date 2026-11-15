@@ -11,6 +11,7 @@
   //     }
   //   }
   // },
+  "cli_default_open_behavior": "existing_window",
   "outline_panel": {
     "dock": "left"
   },
@@ -19,6 +20,11 @@
   },
   "git_panel": {
     "dock": "left"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true
+    }
   },
   "languages": {
     "CSS": {

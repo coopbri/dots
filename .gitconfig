@@ -26,6 +26,7 @@
 	helper = !/usr/bin/gh auth git-credential
 [fetch]
 	prune = true
+	pruneTags = false
 [http]
 	postBuffer = 52428800
 [credential]
