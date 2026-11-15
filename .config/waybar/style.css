@@ -52,6 +52,9 @@ window#waybar.hidden {
 
 #cpu,
 #memory,
+#temperature,
+#custom-gpu,
+#disk,
 /* TODO auto-map over custom modules */
 #custom-spotify,
 #battery,
@@ -82,6 +85,38 @@ window#waybar.hidden {
 
 #memory {
   background-color: #fab387;
+}
+
+#temperature {
+  background-color: #f5c2e7;
+}
+
+#custom-gpu {
+  background-color: #89dceb;
+}
+
+#custom-gpu.suspended {
+  background-color: #6c7086;
+}
+
+#disk {
+  background-color: #b4befe;
+}
+
+/* Resource pressure: amber when warning, red when critical */
+#cpu.warning,
+#memory.warning,
+#custom-gpu.warning,
+#disk.warning {
+  background-color: #f9e2af;
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical,
+#custom-gpu.critical,
+#disk.critical {
+  background-color: #ff0048;
 }
 
 #battery {
@@ -141,4 +176,24 @@ tooltip {
 tooltip label {
   padding: 5px;
   background-color: #131822;
+}
+
+/* Tooltips and tray menus: explicit colors so they stay readable regardless of GTK theme */
+tooltip {
+  background-color: #1e1e2e;
+  border: 1px solid #45475a;
+  border-radius: 6px;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
+
+#tray menu {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+#tray menu menuitem:hover {
+  background-color: #45475a;
 }
