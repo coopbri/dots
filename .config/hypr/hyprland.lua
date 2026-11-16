@@ -65,7 +65,8 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("swaync")
-    hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+    -- polkit auth agent so GUI apps can prompt for root
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
     -- KDE's kiod6 hosts the kmtpd module that owns the MTP device list. Plasma starts
     -- kiod6 with the session but Hyprland does not, and D-Bus activation fails here
     -- ("unknown unit"), so Dolphin's mtp worker finds zero devices and every phone udi
