@@ -43,9 +43,18 @@ hl.env("QT_STYLE_OVERRIDE",    "Breeze")
 hl.env("LIBVA_DRIVER_NAME",    "iHD")
 hl.env("XDG_SESSION_TYPE",     "wayland")
 hl.env("WLR_NO_HARDWARE_CURSORS", "1")
--- Arch ships its app menu as arch-applications.menu; without this, KDE's ksycoca
--- finds no applications, so Dolphin can never resolve default apps (always "Open With")
-hl.env("XDG_MENU_PREFIX",      "arch-")
+-- KDE's ksycoca builds its app list from <prefix>applications.menu; a prefix with no
+-- matching menu file leaves apps unresolved, so Dolphin's "Open With" can't match
+-- picks (e.g. Gwenview) and writes hidden custom .desktop copies instead. Use
+-- arch-applications.menu (archlinux-xdg-menu) when installed, else fall back to
+-- plasma-workspace's plasma-applications.menu
+local function file_exists(path)
+    local f = io.open(path, "r")
+    if f then f:close() return true end
+    return false
+end
+hl.env("XDG_MENU_PREFIX",
+    file_exists("/etc/xdg/menus/arch-applications.menu") and "arch-" or "plasma-")
 -- Mullvad split tunneling mounts a cgroup v1 net_cls controller, which knocks
 -- systemd 256+ out of pure-unified mode and breaks transient-unit creation. KIO
 -- launches apps as app-*@*.service transient units, so Dolphin can't open mpv et al
