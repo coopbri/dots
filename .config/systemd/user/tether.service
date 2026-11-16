@@ -1,0 +1,12 @@
+[Unit]
+Description=Tether (one mouse and keyboard across devices)
+After=graphical-session.target
+BindsTo=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/tether daemon
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
