@@ -30,9 +30,9 @@ local menu        = "wofi"
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
--- Cursor for XWayland apps (e.g. Spotify); match GTK's breeze_cursors/24. A
+-- Cursor for XWayland apps (e.g. Spotify); match GTK's Adwaita/24. A
 -- "transparent"/1 combo here previously shrank the cursor to a dot in X11 apps
-hl.env("XCURSOR_THEME",        "breeze_cursors")
+hl.env("XCURSOR_THEME",        "Adwaita")
 hl.env("XCURSOR_SIZE",         "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 -- Force the Breeze widget style for both Qt5 and Qt6 from one env var (sidesteps the
