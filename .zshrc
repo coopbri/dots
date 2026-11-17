@@ -253,7 +253,7 @@ alias r="Rscript"
 
 alias mine="~/Data/Cloud/Nextcloud/scripts/ethminer.sh"
 
-alias cfg="/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME"
+[[ -f $HOME/.config/zsh/dots.zsh ]] && source $HOME/.config/zsh/dots.zsh
 
 alias shadd="bx --bun shadcn@latest add"
 
