@@ -3,10 +3,7 @@
 #   cfgp  ~/.dots-private  private  github.com/coopbri/dots-private
 # Every file belongs to exactly one repo. `dots <git args>` runs in both
 #
-# New machine:
-#   git clone --bare git@github.com:coopbri/dots.git ~/.dots
-#   git clone --bare git@github.com:coopbri/dots-private.git ~/.dots-private
-#   then for each: <alias> config status.showUntrackedFiles no && <alias> checkout
+# New machine setup and how to move a file between repos: see ~/README.md
 
 _dots_git() { /usr/bin/git -C "$HOME" --git-dir="$1" --work-tree="$HOME" "${@:2}"; }
 

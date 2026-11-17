@@ -11,6 +11,33 @@ My personal dotfiles and system configuration.
 
 The process is inspired by https://www.atlassian.com/git/tutorials/dotfiles.
 
+### Public and private files
+
+Dotfiles live in two bare repos that share `$HOME` as the work tree:
+
+| Command | Repo             | Visibility | Holds                                                  |
+| ------- | ---------------- | ---------- | ------------------------------------------------------ |
+| `cfg`   | `~/.dots`        | public     | everything safe to share (this repo)                   |
+| `cfgp`  | `~/.dots-private` | private    | files with internal notes, e.g. `.claude/CLAUDE.md` |
+
+Each file belongs to exactly one repo. `cfg add` refuses a file that `cfgp` already tracks, and the reverse. `dots <git args>` runs a command in both, e.g. `dots status`, `dots pull`, `dots push`. The functions live in [`.config/zsh/dots.zsh`](.config/zsh/dots.zsh), sourced from `.zshrc`.
+
+Secrets never go in either repo: they load from Bitwarden at runtime (see `load_secrets` in `.zshrc`).
+
+Set up a new machine:
+
+```bash
+git clone --bare git@github.com:coopbri/dots.git ~/.dots
+git clone --bare git@github.com:coopbri/dots-private.git ~/.dots-private
+for r in ~/.dots ~/.dots-private; do
+  git --git-dir=$r config status.showUntrackedFiles no
+  git --git-dir=$r config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  git --git-dir=$r --work-tree=$HOME checkout   # move aside any file it reports as conflicting
+done
+```
+
+To make a file private, untrack it publicly and add it privately: `cfg rm --cached <file> && cfgp add <file>`, then commit in both.
+
 ## Gallery
 
 <div style="display: flex; justify-content: center; gap: 12px;">
